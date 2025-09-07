@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KS Edits</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="logo-text">KS Edits</div>
+    <P><a href="#work">WORK:EDITING</a></P>
+    <P><a href="#about">ABOUT:FREELANCER</a></P>
+    <a href="#contact">CONTACT:7420933703</a>
+</nav>
+
+ <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <img src="logo.png" alt="KS Edits Logo" class="logo">
+    <h1>KS Edits | Professional Video Editing Agency</h1>
+    <p>Creative Edits • Affordable Prices • Happy Clients</p>
+    <a href="seemywork.html" class="btn">See My Work</a>
+    <a href="contact.html" class="btn">Contact us</a>
+    <a href="https://www.instagram.com/marathidhamaal0089?utm_source=ig_web_button_share_sheet&igsh=MzA1bXlnMW4yMW5x" class="btn">Visit Instagram</a>
+  </section>
+<!-- Services Section -->
+<section id="services">
+  <h2>My Services & Pricing</h2>
+  <div class="services-container">
+    
+    <div class="service-box">
+      <h3>Reel Editing</h3>
+      <p>₹500 per reel</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Wedding Videos</h3>
+      <p>10 videos for ₹2000</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Monthly Brand Work</h3>
+      <p>Pricing depends on video quantity</p>
+    </div>
+
+    <div class="service-box">
+      <h3>YouTube Shorts</h3>
+      <p>₹800 for 5 shorts</p>
+    </div>
+
+    <div class="service-box">
+      <h3>YouTube Long Videos</h3>
+      <p>₹1000 per long video</p>
+    </div>
+
+  </div>
+  <!-- Book Your Edit Section -->
+<section id="book" class="py-16 bg-gray-100 text-center">
+  <h2 class="text-3xl font-bold mb-6">Book Your Edit Now</h2>
+  <p class="mb-6" style="color: #000000; font-weight:500;">
+  Fill the form below and I will contact you shortly to start your project.
+</p>
+
+  <button id="openFormBtn" class="bg-yellow-500 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-yellow-600 transition">
+    Book Your Edit
+  </button>
+</section>
+
+<!-- Modal -->
+<div id="bookingModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+  <div class="bg-white rounded-xl w-full max-w-lg p-8 relative">
+    <span id="closeModal" class="absolute top-4 right-6 cursor-pointer text-gray-500 text-2xl">&times;</span>
+    <h3 class="text-2xl font-bold mb-6 text-center">Booking Form</h3>
+    <form id="bookingForm" class="space-y-4">
+      <input type="text" placeholder="Your Name" required class="w-full border p-3 rounded-lg">
+      <input type="email" placeholder="Your Email" required class="w-full border p-3 rounded-lg">
+      <input type="tel" placeholder="Your Phone Number" required class="w-full border p-3 rounded-lg">
+      <textarea placeholder="Video Details / Requirements" required class="w-full border p-3 rounded-lg"></textarea>
+      <button type="submit" class="bg-yellow-500 text-white w-full py-3 rounded-full font-semibold hover:bg-yellow-600 transition">
+        Submit Booking
+      </button>
+    </form>
+  </div>
+</div>
+</section><!-- Portfolio Section -->
+<section id="portfolio" class="portfolio">
+  <h1>AGENCY WORK</h1>
+  <p> I am professional video editor with expreience in editing reels, cinematic projects.I work with clients to deliver high quality results at affordable prices.</p>
+  <p> 
+  <!-- Instagram Portfolio Preview -->
+  <div class="insta-container">   
+  </div>
+  <p>SEE FULL EDITS ON INSTAGRAM:</p>
+  <a href="clientpages.html" target="_blank" class="btn">CLIENT PAGES</a>
+</section>
+<section id="about" class="fade-in">
+  <h2>About Me</h2>
+  <p>
+    I am Kshitij, founder of <strong>KS Edits</strong>.  
+    I’ve worked with multiple clients to create cinematic reels,  and professional video projects.  
+    My goal is to deliver high-quality editing that helps creators and businesses grow.
+  </p>
+</section>
+<script>
+  const openFormBtn = document.getElementById("openFormBtn");
+  const bookingModal = document.getElementById("bookingModal");
+  const closeModal = document.getElementById("closeModal");
+
+  openFormBtn.addEventListener("click", () => {
+    bookingModal.classList.remove("hidden");
+  });
+
+  closeModal.addEventListener("click", () => {
+    bookingModal.classList.add("hidden");
+  });
+
+  bookingModal.addEventListener("click", (e) => {
+    if (e.target === bookingModal) {
+      bookingModal.classList.add("hidden");
+    }
+  });
+
+  document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Thank you! Your booking request has been sent.");
+    bookingModal.classList.add("hidden");
+    this.reset();
+  });
+</script>
+<!-- Footer Section -->
+<footer style="background:#111; color:#fff; padding:50px 20px; text-align:center;">
+
+  <!-- Call to Action -->
+  <h2 style="font-size:28px; margin-bottom:15px;">Let’s Create Something Amazing Together!</h2>
+  <a href="contact.html" 
+     style="display:inline-block; padding:12px 24px; background:#fbbf24; color:#111; 
+            font-weight:600; border-radius:8px; text-decoration:none; margin-bottom:30px;">
+    Book Your Edit
+  </a>
+
+  <!-- Quick Links -->
+  <div style="margin:20px 0;">
+    <a href="index.html" style="color:#bbb; margin:0 10px; text-decoration:none;">Home</a> |
+    <a href="work.html" style="color:#bbb; margin:0 10px; text-decoration:none;">My Work</a> |
+    <a href="clients.html" style="color:#bbb; margin:0 10px; text-decoration:none;">Clients</a> |
+    <a href="contact.html" style="color:#bbb; margin:0 10px; text-decoration:none;">Contact</a>
+  </div>
+
+  <!-- Social Media -->
+  <div style="margin:20px 0;">
+    <a href="https://instagram.com/kshitijshirsat89" target="_blank" style="color:#fbbf24; margin:0 10px;">Instagram</a>
+    <a href="https://youtube.com/https:/shorts/jP2nsdKHrU0?si=oOordxtY5QvcWGa1" target="_blank" style="color:#fbbf24; margin:0 10px;">YouTube</a>
+    <a href="mailto:kshitijshirsat89@gmail.com" style="color:#fbbf24; margin:0 10px;">Email</a>
+  </div>
+
+  <!-- Tagline -->
+  <p style="font-size:16px; margin:20px 0; color:#aaa;">
+    “Turning Moments into Memories — One Edit at a Time.”
+  </p>
+
+  <!-- Copyright -->
+  <p style="font-size:14px; color:#666;">© 2025 KS Edits. All Rights Reserved.</p>
+</footer>
+
+
+</body>
+</html>
